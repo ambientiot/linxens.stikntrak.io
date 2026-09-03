@@ -3,22 +3,50 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Linxens × Ambient IoT | Proposal</title>
-<meta name="description" content="Linxens and Ambient IoT satellite proposal portal.">
+<title>SNT-SAT Development Series | Linxens</title>
+<meta name="description" content="Secure SNT-SAT Development Series proposal portal for Linxens.">
 <style>
-*{box-sizing:border-box}
-html,body{margin:0;width:100%;height:100%;background:#020813}
-body{overflow:hidden;font-family:Arial,Helvetica,sans-serif}
-.hero{position:relative;width:100%;height:100vh;height:100svh;overflow:hidden;background:#020813}
-.hero-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;display:block}
-.message{position:absolute;z-index:2;left:50%;bottom:30px;transform:translateX(-50%);padding:11px 22px;border:1px solid rgba(255,255,255,.3);border-radius:999px;background:rgba(2,8,20,.58);color:#f2c56f;font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;white-space:nowrap}
-@media(max-width:700px){.hero-image{object-position:62% center}.message{bottom:18px;font-size:8px;letter-spacing:.14em;padding:9px 13px}}
+:root{--navy:#061334;--navy2:#0B2046;--gold:#C8942F;--cyan:#39B6CF;--white:#fff;--muted:#b8c5d8}
+*{box-sizing:border-box}html,body{margin:0;width:100%;min-height:100%;background:var(--navy);color:#fff}body{font-family:Arial,Helvetica,sans-serif;overflow:hidden}.page{position:relative;width:100%;height:100vh;height:100svh;min-height:680px;overflow:hidden;background:var(--navy)}.hero-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;filter:brightness(.55) saturate(.88)}.shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(6,19,52,.94) 0%,rgba(6,19,52,.76) 33%,rgba(6,19,52,.34) 62%,rgba(6,19,52,.5) 100%),linear-gradient(0deg,rgba(6,19,52,.78),transparent 38%)}.topbar{position:absolute;z-index:4;top:34px;left:4.5vw;right:4.5vw;display:flex;align-items:center;justify-content:space-between}.brandline,.series{font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase}.brandline{color:#fff}.brandline b{color:var(--cyan)}.brandline i{display:inline-block;width:1px;height:16px;margin:0 14px;background:rgba(255,255,255,.35);vertical-align:middle}.series{color:#d9b466}.intro{position:absolute;z-index:3;left:5vw;top:22%;width:min(390px,30vw)}.eyebrow{color:#d8b05b;font-size:11px;font-weight:700;letter-spacing:.28em;text-transform:uppercase;margin-bottom:14px}.intro h1{font-family:Georgia,'Times New Roman',serif;font-size:clamp(34px,3.4vw,58px);line-height:1.02;font-weight:400;margin:0 0 22px}.intro h1 em{display:block;color:var(--gold);font-style:italic}.intro p{margin:0;color:#d4dceb;font-size:15px;line-height:1.65;max-width:360px}.navigator{position:absolute;z-index:3;right:4vw;top:50%;transform:translateY(-49%);width:min(760px,58vw);height:min(720px,78vh)}.orbit{position:absolute;left:50%;top:50%;width:70%;height:70%;transform:translate(-50%,-50%);border:1px solid rgba(57,182,207,.38);border-radius:50%;box-shadow:0 0 40px rgba(57,182,207,.05)}.orbit:after{content:'›';position:absolute;right:-9px;top:47%;color:var(--cyan);font-size:24px;transform:rotate(18deg)}.centre{position:absolute;left:50%;top:50%;width:300px;height:300px;transform:translate(-50%,-50%);border-radius:50%;border:1.5px solid var(--gold);background:radial-gradient(circle at 35% 25%,rgba(24,55,101,.96),rgba(6,19,52,.98) 70%);box-shadow:0 24px 70px rgba(0,0,0,.42),0 0 0 8px rgba(200,148,47,.05);display:flex;align-items:center;justify-content:center;text-align:center;padding:34px;transition:opacity .25s,transform .55s cubic-bezier(.2,.75,.2,1)}.centre.swap{opacity:.25;transform:translate(-50%,-50%) scale(.9)}.doc-no{color:var(--gold);font-size:12px;font-weight:700;letter-spacing:.22em}.centre h2{font-family:Georgia,'Times New Roman',serif;font-size:29px;line-height:1.05;font-weight:400;margin:11px 0 10px}.centre p{font-size:12px;line-height:1.45;color:var(--muted);margin:0 auto 18px;max-width:220px}.actions{display:flex;gap:8px;justify-content:center}.actions a{display:inline-flex;align-items:center;justify-content:center;min-height:36px;padding:0 12px;border:1px solid rgba(200,148,47,.75);border-radius:999px;color:#fff;text-decoration:none;font-size:9px;font-weight:700;letter-spacing:.09em;text-transform:uppercase}.actions a.primary{background:var(--gold);color:#07152f}.actions a.disabled{opacity:.42;pointer-events:none}.node{position:absolute;width:116px;height:116px;border-radius:50%;border:1px solid rgba(57,182,207,.55);background:rgba(6,19,52,.9);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:12px;cursor:pointer;transition:transform .55s cubic-bezier(.2,.75,.2,1),border-color .25s,background .25s;box-shadow:0 10px 32px rgba(0,0,0,.25)}.node:hover{border-color:var(--gold);background:rgba(11,32,70,.98);transform:scale(1.06)}.node .n{color:var(--cyan);font-size:10px;font-weight:700;letter-spacing:.16em;margin-bottom:6px}.node .t{font-size:9px;font-weight:700;line-height:1.25;letter-spacing:.04em;text-transform:uppercase}.n2{left:47%;top:0}.n3{right:2%;top:24%}.n4{right:5%;bottom:13%}.n5{left:44%;bottom:0}.n6{left:1%;bottom:18%}.n1{left:0;top:22%}.secure{position:absolute;z-index:3;left:5vw;bottom:38px}.secure b{display:block;color:var(--gold);font-size:9px;letter-spacing:.22em;margin-bottom:7px}.secure span{color:#aebbd0;font-size:10px}.footerbrand{position:absolute;z-index:3;right:5vw;bottom:38px;font-size:10px;font-weight:700;letter-spacing:.14em;color:#fff}.footerbrand b{color:var(--cyan)}.footerbrand i{font-style:normal;color:var(--gold);margin:0 9px}.mobile-selectors{display:none}
+@media(max-width:1100px){.intro{width:31vw}.navigator{right:1vw;width:64vw}.centre{width:260px;height:260px}.centre h2{font-size:25px}.node{width:100px;height:100px}}
+@media(max-width:760px){body{overflow:auto}.page{min-height:100svh;height:auto;padding:100px 22px 120px;overflow:hidden}.hero-image{position:fixed}.topbar{top:22px;left:22px;right:22px}.series{font-size:8px;letter-spacing:.14em}.brandline{font-size:9px;letter-spacing:.12em}.brandline i{margin:0 7px}.intro{position:relative;left:auto;top:auto;width:auto;margin:18px 0 26px}.intro h1{font-size:38px}.intro p{font-size:13px}.navigator{position:relative;right:auto;top:auto;transform:none;width:100%;height:auto;display:flex;flex-direction:column;align-items:center}.orbit,.node{display:none}.centre{position:relative;left:auto;top:auto;transform:none;width:min(310px,84vw);height:min(310px,84vw);padding:32px}.centre.swap{transform:scale(.92)}.mobile-selectors{display:flex;width:100%;overflow-x:auto;gap:8px;margin-top:22px;padding:3px 2px 10px;scrollbar-width:none}.mobile-selectors::-webkit-scrollbar{display:none}.mobile-selectors button{flex:0 0 50px;height:50px;border-radius:50%;border:1px solid rgba(57,182,207,.55);background:rgba(6,19,52,.9);color:#fff;font-weight:700}.mobile-selectors button.active{border-color:var(--gold);color:var(--gold)}.secure{left:22px;bottom:24px;max-width:58%}.footerbrand{right:22px;bottom:24px;font-size:8px}.actions a{font-size:8px;padding:0 10px}}
 </style>
 </head>
 <body>
-<main class="hero" aria-label="Linxens and Ambient IoT satellite proposal landing page">
-<img class="hero-image" src="/linxens-hero.jpg?v=1" alt="Linxens and Ambient IoT satellite proposal">
-<div class="message">Proposal site under construction</div>
+<main class="page">
+<img class="hero-image" src="/linxens-hero.jpg?v=1" alt="Satellite above Earth">
+<div class="shade"></div>
+<header class="topbar"><div class="brandline">AMBIENT <b>IOT</b><i></i>LINXENS</div><div class="series">SNT-SAT DEVELOPMENT SERIES</div></header>
+<section class="intro"><div class="eyebrow">WELCOME TO THE</div><h1>SNT-SAT <em>Development Series</em></h1><p>A comprehensive proposal for the development of a next-generation satellite gateway — purpose-built for Linxens.</p></section>
+<section class="navigator" aria-label="SNT-SAT proposal documents">
+<div class="orbit"></div>
+<div class="centre" id="centre"><div><div class="doc-no" id="docNo">01 — DOCUMENT</div><h2 id="docTitle">Executive Proposal</h2><p id="docSubtitle">Strategic proposal and executive overview for the SNT-SAT satellite gateway programme.</p><div class="actions"><a id="viewLink" class="primary disabled" href="#">View Document</a><a id="downloadLink" class="disabled" href="#">Download PDF</a></div></div></div>
+<button class="node n2" data-doc="1"><span class="n">02</span><span class="t">Market Opportunity</span></button>
+<button class="node n3" data-doc="2"><span class="n">03</span><span class="t">Product + Technical Concept</span></button>
+<button class="node n4" data-doc="3"><span class="n">04</span><span class="t">Development Programme</span></button>
+<button class="node n5" data-doc="4"><span class="n">05</span><span class="t">Commercial Proposal</span></button>
+<button class="node n6" data-doc="5"><span class="n">06</span><span class="t">Partnership Framework</span></button>
+<button class="node n1" data-doc="0"><span class="n">01</span><span class="t">Executive Proposal</span></button>
+<div class="mobile-selectors" id="mobileSelectors"></div>
+</section>
+<div class="secure"><b>SECURE ACCESS</b><span>All documents are confidential and for authorised Linxens personnel only.</span></div>
+<div class="footerbrand">AMBIENT <b>IOT</b><i>|</i>LINXENS</div>
 </main>
+<script>
+const docs=[
+{no:'01',title:'Executive Proposal',subtitle:'Strategic proposal and executive overview for the SNT-SAT satellite gateway programme.',view:'',pdf:''},
+{no:'02',title:'Market Opportunity',subtitle:'Market context, opportunity sizing and strategic rationale for the SNT-SAT programme.',view:'',pdf:''},
+{no:'03',title:'Product + Technical Concept',subtitle:'Proposed gateway architecture, product concept and core technical approach.',view:'',pdf:''},
+{no:'04',title:'Development Programme',subtitle:'Development phases, milestones, engineering activities and programme pathway.',view:'',pdf:''},
+{no:'05',title:'Commercial Proposal',subtitle:'Commercial structure, programme investment and proposed delivery framework.',view:'',pdf:''},
+{no:'06',title:'Partnership Framework',subtitle:'Proposed Linxens and Ambient IoT roles, responsibilities and long-term partnership model.',view:'',pdf:''}
+];
+let current=0;const centre=document.getElementById('centre'),no=document.getElementById('docNo'),title=document.getElementById('docTitle'),sub=document.getElementById('docSubtitle'),view=document.getElementById('viewLink'),download=document.getElementById('downloadLink');
+function link(el,url){el.href=url||'#';el.classList.toggle('disabled',!url);if(url){el.target='_blank';el.rel='noopener'}else{el.removeAttribute('target')}}
+function selectDoc(i){if(i===current&&title.textContent===docs[i].title)return;centre.classList.add('swap');setTimeout(()=>{current=i;const d=docs[i];no.textContent=d.no+' — DOCUMENT';title.textContent=d.title;sub.textContent=d.subtitle;link(view,d.view);link(download,d.pdf);document.querySelectorAll('.mobile-selectors button').forEach((b,x)=>b.classList.toggle('active',x===i));centre.classList.remove('swap')},280)}
+document.querySelectorAll('.node').forEach(n=>n.addEventListener('click',()=>selectDoc(+n.dataset.doc)));
+const ms=document.getElementById('mobileSelectors');docs.forEach((d,i)=>{const b=document.createElement('button');b.textContent=d.no;b.className=i===0?'active':'';b.setAttribute('aria-label',d.title);b.onclick=()=>selectDoc(i);ms.appendChild(b)});
+let sx=0;centre.addEventListener('touchstart',e=>sx=e.touches[0].clientX,{passive:true});centre.addEventListener('touchend',e=>{const dx=e.changedTouches[0].clientX-sx;if(Math.abs(dx)>45)selectDoc((current+(dx<0?1:5))%6)},{passive:true});
+</script>
 </body>
 </html>
